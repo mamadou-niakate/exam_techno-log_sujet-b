@@ -6,10 +6,10 @@ RUN pip install pymongo
 
 RUN pip install uvicorn
 
-WORKDIR /exam_sujet_b
+WORKDIR /exam_api
 
 COPY . .
 
-EXPOSE 8888
+EXPOSE 4800
 
-CMD ["uvicorn", "app_api:app", "--reload", "--host", "0.0.0.0", "--port", "8888"]
+CMD ["uvicorn", "app_api:app", "--reload", "--host", "0.0.0.0", "--port", "4800"]
