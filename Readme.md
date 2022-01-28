@@ -3,7 +3,9 @@
 ## J'ai deux images docker
 - **mongo_api_exam** : 
   c'est l'image de l'api qui permet d'ajouter dans la base des données et récupérer des jeux en utilisation l'url de l'api
+  - ``docker push mniakate/mongo_api_exam:tagname``
 - **fill_db** : c'est l'image qui permet d'ajouter automatiquement des données pré-définie à la base des données
+  - ``docker push mniakate/fill_db:tagname``
 
 # J'ai un fichier docker file qui orchestre tous les containers
 ```
