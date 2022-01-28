@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pymongo import MongoClient
 from ModelJeu import ModelJeu
 
-client = MongoClient(host="mongodb")
+client = MongoClient(host="c_mongo_exam")
 
 db = client["jeux_db"]
 
