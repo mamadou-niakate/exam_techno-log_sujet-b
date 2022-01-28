@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: api.Dockerfile
     ports:
-      - "4800:4800"
+      - "3000:3000"
     volumes:
-      - .:/exam
+      - .:/exam_api
   mongodb_exam:
     container_name: c_mongo_exam
     image: mongo:latest
@@ -16,3 +16,12 @@ services:
        - "4801:27017"
     depends_on:
        - fastapi_exam
+  fill_db:
+    container_name: "fill_db"
+    build:
+      context: .
+      dockerfile: seed_mongo.Dockerfile
+    ports:
+      - "4080:4080"
+    depends_on:
+      - mongodb_exam

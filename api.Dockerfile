@@ -10,6 +10,6 @@ WORKDIR /exam_api
 
 COPY . .
 
-EXPOSE 4800
+EXPOSE 3000
 
-CMD ["uvicorn", "app_api:app", "--reload", "--host", "0.0.0.0", "--port", "4800"]
+CMD ["uvicorn", "app_api:app", "--reload", "--host", "0.0.0.0", "--port", "3000"]
