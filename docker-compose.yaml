@@ -1,6 +1,6 @@
 version: '3'
 services:
-  fastapi:
+  fastapi_exam:
     container_name: "mongo_api_exam"
     build:
       context: .
@@ -9,10 +9,10 @@ services:
       - "4800:4800"
     volumes:
       - .:/exam
-  mongodb:
+  mongodb_exam:
     container_name: c_mongo_exam
     image: mongo:latest
     ports:
        - "4801:27017"
     depends_on:
-       - mongo_api_exam
+       - fastapi_exam
